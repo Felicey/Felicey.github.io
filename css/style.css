@@ -1,0 +1,654 @@
+@charset "UTF-8";
+/* Reset
+------------------------------------------------------------*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+/* Base
+------------------------------------------------------------*/
+html {
+  font-size: 62.5%;
+}
+
+body {
+  color: #7c5c4a;
+  font-size: 1.4rem;
+  font-family: "游ゴシック", YuGothic, "メイリオ", Verdana, "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+  line-height: 1.6;
+  letter-spacing: 0.1rem;
+  background-color: #faf6ed;
+  text-align: center;
+}
+
+a {
+  color: #7c5c4a;
+  color: #7c5c4a;
+  text-decoration: none;
+}
+a:visited {
+  color: #5c4437;
+}
+a:hover {
+  color: #5c4437;
+}
+a:active {
+  color: #8c6854;
+}
+
+@media (min-width: 768px) {
+  a:hover {
+    text-decoration: underline;
+  }
+}
+/* Layout
+------------------------------------------------------------*/
+.block-center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.max-full-width {
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+@media (min-width: 768px) {
+  .sp {
+    display: none;
+  }
+}
+@media (max-width: 767px) {
+  .pc {
+    display: none;
+  }
+}
+/*SP表示　装飾 START=====================================================================*/
+header {
+  background-color: rgba(221, 205, 191, 0.8);
+  width: 100%;
+  position: absolute;
+  padding: 25px 8px 15px 8px;
+}
+header .header_in {
+  display: flex;
+  justify-content: space-between;
+  width: 95%;
+  margin-left: auto;
+  margin-right: auto;
+}
+header .header_in h1 img {
+  width: 100px;
+}
+header .header_in .sp_navi_li {
+  position: absolute;
+  top: 65px;
+  right: 3%;
+  left: 3%;
+  background: #DD964A;
+  margin: 0;
+  padding: 0;
+  display: none;
+  z-index: 100;
+}
+header .header_in .sp_navi_li li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+header .header_in .sp_navi_li li a {
+  display: block;
+  padding: 23px 0;
+  border-bottom: 1px solid #eee;
+  text-decoration: none;
+  text-align: center;
+}
+header .header_in .sp_navi_li li a.last {
+  border-bottom: none;
+}
+
+main {
+  /*aboutページ 装飾=====================================================================*/
+  /*aboutページ 装飾 END=====================================================================*/
+  /*menuページ 装飾=====================================================================*/
+  /*menuページ 装飾 END=====================================================================*/
+  /*accessページ 装飾=====================================================================*/
+  /*accessページ 装飾 END=====================================================================*/
+}
+main a.button {
+  display: block;
+  background: #DD964A;
+  width: 230px;
+  padding: 20px 0;
+  margin: 0 auto;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.29);
+}
+main .deco {
+  position: absolute;
+  width: 20vw;
+  z-index: -1;
+  opacity: 0.7;
+}
+main p {
+  display: block;
+  margin: 30px 0;
+}
+main span {
+  font-size: 2rem;
+}
+main span.underline {
+  text-decoration: underline solid #d9ba75;
+}
+main span.bold {
+  font-weight: bold;
+}
+main .page_title {
+  margin: 40px 0;
+}
+main .twitter_area {
+  margin: auto;
+  margin-bottom: 80px;
+  width: 90%;
+}
+main .twitter_text {
+  display: block;
+  margin-top: 70px;
+  width: 100%;
+  border-bottom: 2px solid #7c5c4a;
+}
+main #title_cover_top {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  background: #D3CDBF;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-content: center;
+}
+main #title_cover_top .cover_img {
+  margin-top: 0;
+  margin-left: -50%;
+  width: 180%;
+  height: 50vh;
+  background-position: 100% 100%;
+  background-image: url("../img/top.jpg");
+  background-size: cover;
+}
+main #title_cover_top .scroll_btn {
+  align-self: flex-end;
+  margin: 0 auto;
+  margin-bottom: 40px;
+}
+main #title_cover_top .scroll_btn i {
+  color: #DD964A;
+  background-color: #ffffff;
+  padding-top: 5px;
+  width: 30px;
+  height: 30px;
+  font-size: 2rem;
+  border-radius: 50%;
+}
+main #about_area {
+  position: relative;
+}
+main #about_area h3.logo {
+  padding: 35px 0;
+  background: rgba(255, 255, 255, 0.4);
+}
+main #about_area h2 {
+  font-size: 1.8rem;
+  margin-top: 20px;
+  margin-bottom: 50px;
+}
+main #about_area h2 span {
+  font-size: 2.3rem;
+}
+main #about_area .pink4 {
+  top: 190px;
+  left: 8%;
+}
+main #about_area .purple2 {
+  top: 310px;
+  right: 15%;
+}
+main #about_area .blue2 {
+  bottom: 80px;
+  left: 7%;
+}
+main #about_area .pink3 {
+  bottom: 190px;
+  right: 10%;
+}
+main #menu_cover {
+  margin-top: 80px;
+  margin-bottom: 60px;
+  height: 180px;
+  background-image: url("../img/drink.jpg");
+  background-size: cover;
+}
+main #menu_area {
+  position: relative;
+}
+main #menu_area .yellow {
+  top: 60px;
+  left: 10%;
+  opacity: 1;
+}
+main #menu_area .orange2 {
+  bottom: 40px;
+  right: 8%;
+}
+main #access_cover {
+  margin-top: 80px;
+  margin-bottom: 60px;
+  height: 180px;
+  background-image: url("../img/exterior1.jpg");
+  background-size: cover;
+}
+main #access_area {
+  position: relative;
+}
+main #access_area .green2 {
+  top: 160px;
+  left: 5%;
+}
+main #access_area .blue4 {
+  top: -20px;
+  right: 5%;
+}
+main #title_cover_about {
+  height: 350px;
+  background-image: url("../img/indoor2.jpg");
+  background-size: cover;
+  background-position: 70% 0%;
+}
+main #about .items {
+  margin: 0 auto;
+  width: 80%;
+  margin-top: 40px;
+  margin-bottom: 35px;
+}
+main #about .items img {
+  width: 100%;
+  height: 125px;
+  object-fit: cover;
+}
+main #about .items p {
+  text-align: left;
+  margin-top: 15px;
+}
+main #title_cover_menu {
+  height: 350px;
+  background-image: url("../img/cheeseCake.jpg");
+  background-size: cover;
+  background-position: 40% 0%;
+}
+main #menu {
+  position: relative;
+}
+main #menu .container {
+  margin-top: 45px;
+  margin-bottom: 100px;
+  text-align: left;
+}
+main #menu .container .items {
+  margin: 0 auto;
+  width: 90%;
+  margin-top: 40px;
+  text-shadow: 0px 0px 3px #faf6ed;
+}
+main #menu .container .items h3 {
+  margin: 0;
+}
+main #menu .container .items h3 span {
+  margin-left: -5px;
+}
+main #menu .container .items h3 span.small {
+  font-size: 1.6rem;
+}
+main #menu .container .items p {
+  margin: 0 0 0 5px;
+}
+main #menu .deco {
+  width: auto;
+  opacity: 0.5;
+}
+main #menu .soda {
+  top: 150px;
+  right: 25%;
+}
+main #menu .coffee {
+  top: 330px;
+  right: 5%;
+}
+main #menu .parfait {
+  top: 440px;
+  right: 5%;
+}
+main #menu .pudding {
+  top: 570px;
+  right: 9%;
+}
+main #menu .sandwich {
+  bottom: -10px;
+  right: 10%;
+}
+main #menu .carry {
+  bottom: -80px;
+  right: 25%;
+}
+main #title_cover_access {
+  height: 350px;
+  background-image: url("../img/indoor3.jpg");
+  background-size: cover;
+  background-position: 50% 0%;
+}
+main #access .items {
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 1.4rem;
+  text-align: left;
+}
+main #access .items a {
+  text-decoration: underline;
+}
+main #access #gooleMapArea {
+  height: 200px;
+  margin-bottom: 80px;
+}
+
+footer {
+  padding: 30px 0;
+  background: #825C4C;
+  color: #D3CDBF;
+}
+footer ul li {
+  display: inline-block;
+  font-size: 1.2rem;
+}
+footer ul li a {
+  color: #D3CDBF;
+}
+footer ul li a:visited {
+  color: #beb5a1;
+}
+footer ul li a:hover {
+  color: #beb5a1;
+}
+footer ul li a:active {
+  color: #ddd9ce;
+}
+footer ul li.twitter_icon {
+  margin-top: 15px;
+  font-size: 2rem;
+  display: block;
+}
+footer ul li span {
+  margin: 0 12px;
+}
+footer .copyright {
+  display: block;
+  margin-top: 30px;
+  font-size: 1rem;
+}
+
+/*SP表示END=====================================================================*/
+@media (min-width: 768px) {
+  header {
+    background-color: rgba(221, 205, 191, 0.8);
+    position: absolute;
+    width: 100%;
+    padding: 15px 0 15px 0;
+    z-index: 100;
+  }
+  header .header_in {
+    max-width: 750px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  header .header_in h1 a:hover {
+    position: relative;
+    top: 2px;
+    left: 2px;
+  }
+  header .header_in h1 img {
+    width: 170px;
+  }
+  header .header_in ul li {
+    display: inline-block;
+    margin-left: 40px;
+  }
+  header .header_in ul li a:hover {
+    position: relative;
+    top: 2px;
+    left: 2px;
+  }
+  header .header_in ul li a.twitter_icon {
+    font-size: 2rem;
+  }
+
+  main {
+    /*aboutページ 装飾=====================================================================*/
+    /*aboutページ 装飾 END=====================================================================*/
+    /*menuページ 装飾=====================================================================*/
+    /*menuページ 装飾 END=====================================================================*/
+    /*accessページ 装飾=====================================================================*/
+    /*accessページ 装飾 END=====================================================================*/
+  }
+  main .deco {
+    width: auto;
+    opacity: 1;
+  }
+  main a.button {
+    margin-top: 80px;
+  }
+  main .button:active {
+    box-shadow: inset 0 0 2px rgba(128, 128, 128, 0.1);
+    transform: translateY(2px);
+  }
+  main a.button:hover {
+    position: relative;
+    top: 2px;
+  }
+  main .page_title {
+    margin: 70px auto 35px auto;
+    width: 170px;
+    background: #DD964A;
+    border-radius: 50%;
+    padding: 25px;
+  }
+  main .twitter_text {
+    margin-left: auto;
+    margin-right: auto;
+    width: 230px;
+  }
+  main .twitter_area {
+    max-width: 500px;
+  }
+  main #title_cover_top {
+    height: auto;
+    background: #D3CDBF;
+    display: block;
+    position: relative;
+  }
+  main #title_cover_top .cover_img {
+    margin: 0;
+    width: auto;
+    height: 500px;
+    background-position: 100% 100%;
+    background-image: url("../img/top.jpg");
+    background-size: cover;
+  }
+  main #title_cover_top h2 img {
+    position: absolute;
+    left: 10%;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+  }
+  main #about_area .pink4 {
+    top: 55px;
+    left: 5%;
+  }
+  main #about_area .purple2 {
+    top: 310px;
+    right: 5%;
+  }
+  main #about_area .blue2 {
+    bottom: 80px;
+    left: 10%;
+  }
+  main #about_area .pink3 {
+    bottom: -40px;
+    right: 15%;
+  }
+  main #menu_cover {
+    height: 400px;
+  }
+  main #menu_area {
+    position: relative;
+  }
+  main #menu_area .container {
+    display: flex;
+    justify-content: center;
+  }
+  main #menu_area .yellow {
+    top: 60px;
+    left: 10%;
+    opacity: 1;
+  }
+  main #menu_area .orange2 {
+    bottom: 40px;
+    right: 8%;
+  }
+  main #access_cover {
+    height: 400px;
+    background-position: 50%;
+  }
+  main #access_area .green2 {
+    top: -50px;
+    left: 20%;
+  }
+  main #access_area .blue4 {
+    top: 20px;
+    right: 15%;
+  }
+  main #access_area .pink4 {
+    top: 220px;
+    left: 10%;
+  }
+  main #access_area .green1 {
+    top: 290px;
+    right: 15%;
+  }
+  main #about .container {
+    max-width: 700px;
+    margin-top: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: space-between;
+  }
+  main #about .container .items {
+    margin: 0 10px;
+  }
+  main #title_cover_menu {
+    background-position: 40% 30%;
+  }
+  main #menu .container {
+    display: flex;
+    flex-flow: column wrap;
+    max-width: 700px;
+    height: 440px;
+    align-content: center;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 70px;
+  }
+  main #menu .container .items {
+    margin: 10px;
+    width: 260px;
+    height: 200px;
+  }
+  main #menu .deco {
+    width: auto;
+    opacity: 0.6;
+  }
+  main #menu .soda {
+    height: 100px;
+    top: 60px;
+    left: 15%;
+  }
+  main #menu .coffee {
+    top: 330px;
+    left: 5%;
+  }
+  main #menu .parfait {
+    top: 60px;
+    right: 20%;
+  }
+  main #menu .pudding {
+    top: 210px;
+    right: 10%;
+  }
+  main #menu .sandwich {
+    bottom: 90px;
+    right: 7%;
+  }
+  main #menu .carry {
+    bottom: 8px;
+    right: 25%;
+  }
+  main #title_cover_access {
+    height: 350px;
+    background-image: url("../img/indoor3.jpg");
+    background-size: cover;
+    background-position: center;
+  }
+  main #access .container {
+    max-width: 750px;
+    margin: 0 auto;
+    display: flex;
+    flex-flow: row-reverse wrap;
+  }
+  main #access .container .items {
+    margin-left: 40px;
+    width: 300px;
+    text-align: left;
+  }
+  main #access .container .items a {
+    text-decoration: underline;
+  }
+  main #access .container .items .text_top {
+    margin-top: 0;
+  }
+  main #access .container #gooleMapArea {
+    width: 400px;
+    height: 430px;
+    margin-bottom: 80px;
+  }
+
+  footer ul li.twitter_icon {
+    margin-top: 0;
+    margin-left: 30px;
+    display: inline-block;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

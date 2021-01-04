@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <!-- Basic Page Needs
+        –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+        <meta charset="utf-8">
+        <title>おうちカフェいこい</title>
+        <meta name="description" content="千葉県市川市にあるカフェのサイトです。こじんまりとした店でオーナーが一人で経営しています。実家のようにくつろいでもらえる場所を目指しています。">
+        <meta name="author" content="カフェ、市川、デザート、スイーツ、漫画">
+        
+        <!-- Mobile Specific Metas
+        –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <!-- CSS
+        –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="css/style.css">
+        
+        
+        <!-- JavaScript
+        –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+        
+    </head>
+    <body>
+        <header>
+            <div class="header_in">
+                <h1><a href="index.html"><img src="img/logo_yoko.png" alt="おうちカフェいこい"></a></h1>
+                <div class="sp_navi sp">
+                    <img id="sp_navi_btn" class="u-max-full-width" src="img/sp_navi.png" alt="sp_navi">
+                    <ul class="sp_navi_li">
+                        <li><a href="about.html"><img src="img/logo_about.png" alt="おみせについて"></a></li>
+                        <li><a href="menu.html"><img src="img/logo_menu.png" alt="メニュー"></a></li>
+                        <li><a href="access.html"><img src="img/logo_access.png" alt="アクセス"></a></li>
+                        <li><a class="last" href="https://twitter.com/demo_shop0786" target="_blank"><img src="img/logo_twitter.png" alt="Twitter"></a></li>
+                    </ul>
+                </div>
+                <div class="pc_navi pc">
+                    <ul class="pc_navi_li">
+                        <li><a href="about.html"><img src="img/navi_about.png" alt="おみせについて"></a></li>
+                        <li><a href="menu.html"><img src="img/navi_menu.png" alt="メニュー"></a></li>
+                        <li><a href="access.html"><img src="img/navi_access.png" alt="アクセス"></a></li>
+                        <li><a class="twitter_icon" href="https://twitter.com/demo_shop0786" target=”_blank”><i aria-hidden="true"  class="fa fa-twitter-square"></i></a></li>
+                    </ul>
+                </div><!-- pc_navi -->
+            </div><!-- header_in -->
+        </header>
+        
+        <main>
+            <div id="title_cover_about">
+            </div><!-- #title_cover_about -->
+               
+            <div id="about">
+                <h2 class="page_title pc"><img src="img/logo_about.png" alt="おみせについて"></h2>
+                <h2 class="page_title sp"><img src="img/logo_about_sp.png" alt="おみせについて"></h2>
+                <h2>「おうちカフェいこい」は<br class="sp"><span>"実家のような憩いの場"</span>を<br class="sp">テーマに開業した<br class="sp">ちいさな<span>カフェ</span>です。</h2>
+                <div class="container">
+                    <div class="items">
+                        <div class="images max-full-width"><img src="img/tatami.jpg" alt="座敷席"></div>
+                        <p>10席ほどの小さな店内。<br>カウンター席のほか、テーブル席や座敷席をご用意しています。</p>
+                    </div>
+                    <div class="items">
+                        <div class="images max-full-width"><img src="img/manga.jpg" alt="漫画棚"></div>
+                        <p>店内のマンガや本はご自由にお読みください。<br>少女漫画のラインナップが豊富です。</p>
+                    </div>
+                    <div class="items">
+                        <div class="images max-full-width"><img src="img/indoor1.jpg" alt="室内"></div>
+                        <p>部活の打ち上げ、スポーツクラブや趣味の集まりなど、貸し切りパーティを開くこともできます。ご相談ください。</p>
+                    </div>
+                </div>
+                
+                <span class="bold twitter_text">Twitter</span>
+                <p>最新情報はこちらから！</p>
+                
+                <div class="twitter_area">
+                    <a class="twitter-timeline" data-width="100%" href="https://twitter.com/demo_shop0786?ref_src=twsrc%5Etfw">Tweets by demo_shop0786</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                </div>
+            </div><!-- #about -->
+        </main>
+        
+        <footer>
+            <div>
+                <ul>
+                    <li><a href="about.html">おみせについて</a></li>
+                    <li><span>／</span><a href="menu.html">メニュー</a></li>
+                    <li><span>／</span><a href="access.html">アクセス</a></li>
+                    <li class="twitter_icon"><a href="https://twitter.com/demo_shop0786" target=”_blank”><i aria-hidden="true"  class="fa fa-twitter-square"></i></a></li>
+                </ul>
+            </div>
+            <p class="copyright">(C)Ouchi Cafe Icoi</p>
+        </footer>
+        
+        
+        <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        
+        <script>
+            $(function(){
+                $(document).ready(function(){
+                    $("#sp_navi_btn").click(function (){
+                      $(this).next().slideToggle();
+                    });
+                });
+            });
+        </script>
+    </body>
+</html>

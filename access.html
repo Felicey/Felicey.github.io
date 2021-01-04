@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <!-- Basic Page Needs
+        –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+        <meta charset="utf-8">
+        <title>おうちカフェいこい</title>
+        <meta name="description" content="千葉県市川市にあるカフェのサイトです。こじんまりとした店でオーナーが一人で経営しています。実家のようにくつろいでもらえる場所を目指しています。">
+        <meta name="author" content="カフェ、市川、デザート、スイーツ、漫画">
+        
+        <!-- Mobile Specific Metas
+        –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <!-- CSS
+        –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="css/style.css">
+        
+        
+        <!-- JavaScript
+        –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+        
+    </head>
+    <body>
+        <header>
+            <div class="header_in">
+                <h1><a href="index.html"><img src="img/logo_yoko.png" alt="おうちカフェいこい"></a></h1>
+                <div class="sp_navi sp">
+                    <img id="sp_navi_btn" class="u-max-full-width" src="img/sp_navi.png" alt="sp_navi">
+                    <ul class="sp_navi_li">
+                        <li><a href="about.html"><img src="img/logo_about.png" alt="おみせについて"></a></li>
+                        <li><a href="menu.html"><img src="img/logo_menu.png" alt="メニュー"></a></li>
+                        <li><a href="access.html"><img src="img/logo_access.png" alt="アクセス"></a></li>
+                        <li><a class="last" href="https://twitter.com/demo_shop0786" target="_blank"><img src="img/logo_twitter.png" alt="Twitter"></a></li>
+                    </ul>
+                </div>
+                <div class="pc_navi pc">
+                    <ul class="pc_navi_li">
+                        <li><a href="about.html"><img src="img/navi_about.png" alt="おみせについて"></a></li>
+                        <li><a href="menu.html"><img src="img/navi_menu.png" alt="メニュー"></a></li>
+                        <li><a href="access.html"><img src="img/navi_access.png" alt="アクセス"></a></li>
+                        <li><a class="twitter_icon" href="https://twitter.com/demo_shop0786" target=”_blank”><i aria-hidden="true"  class="fa fa-twitter-square"></i></a></li>
+                    </ul>
+                </div><!-- pc_navi -->
+            </div><!-- header_in -->
+        </header>
+        
+        <main>
+            <div id="title_cover_access">
+            </div><!-- #title_cover_access -->
+               
+            <div id="access">
+                <h2 class="page_title pc"><img src="img/logo_access.png" alt="アクセス"></h2>
+                <h2 class="page_title sp"><img src="img/logo_access_sp.png" alt="アクセス"></h2>
+                
+                <div class="container">
+                    <div class="items">
+                        <p class="text_top">千葉県市川市　市川真間駅から徒歩5分、<br>
+                            〇〇高校から徒歩3分の場所にございます。</p>
+                        <p>
+                            オープン：<br><span class="bold">12〜19時</span>　
+                        </p>
+                        <p>定休日：<br><span class="bold">月曜・木曜</span><br>年末年始など、臨時休業もございます。<br>
+                        詳しくは<a href="https://twitter.com/demo_shop0786">Twitter</a>をご覧ください。
+                        </p>
+                        <p>住所：<br>千葉県市川市〇〇１丁目00-0</p>
+                        <p>
+                            TEL：<br><span class="bold">00-0000-0000</span><br>貸し切りのご相談はこちらからどうぞ！
+                        </p>
+                    </div>
+                    <div id="gooleMapArea">
+                        <script src="//maps.googleapis.com/maps/api/js?key=AIzaSyCZpUpwOiHsTJczMJaL39nS0SrjCAZN2ZU"></script>
+<script type="text/javascript">
+function googleMap() {
+var latlng = new google.maps.LatLng(35.731639,139.914028);/* 座標 */
+var myOptions = {
+zoom: 16, /*拡大比率*/
+center: latlng,
+scrollwheel: false,
+disableDoubleClickZoom: true,
+draggable: false,
+mapTypeControlOptions: { mapTypeIds: ['style', google.maps.MapTypeId.ROADMAP] }
+};
+var map = new google.maps.Map(document.getElementById('map1'), myOptions);
+/*アイコン設定*/
+var icon = new google.maps.MarkerImage('img/map_pin.png',/*画像url*/
+new google.maps.Size(48,48),/*アイコンサイズ*/
+new google.maps.Point(0,0)/*アイコン位置*/
+);
+var markerOptions = {
+position: latlng,
+map: map,
+icon: icon,
+title: 'おうちカフェいこい',/*タイトル*/
+animation: google.maps.Animation.DROP/*アニメーション*/
+};
+var marker = new google.maps.Marker(markerOptions);
+/*取得スタイルの貼り付け*/
+var styleOptions = [
+{
+"stylers": [
+{ "hue": '#DD964A' }
+]
+}
+];
+var styledMapOptions = { name: 'おうちカフェいこい' }/*地図右上のタイトル*/
+var sampleType = new google.maps.StyledMapType(styleOptions, styledMapOptions);
+map.mapTypes.set('style', sampleType);
+map.setMapTypeId('style');
+};
+google.maps.event.addDomListener(window, 'load', function() {
+googleMap();
+});
+</script>
+<div id="map1" style="width:100%; height:100%; margin:0 auto;"></div>
+                    </div>
+                </div>
+                
+            </div><!-- #access -->
+        </main>
+        
+        <footer>
+            <div>
+                <ul>
+                    <li><a href="about.html">おみせについて</a></li>
+                    <li><span>／</span><a href="menu.html">メニュー</a></li>
+                    <li><span>／</span><a href="access.html">アクセス</a></li>
+                    <li class="twitter_icon"><a href="https://twitter.com/demo_shop0786" target=”_blank”><i aria-hidden="true"  class="fa fa-twitter-square"></i></a></li>
+                </ul>
+            </div>
+            <p class="copyright">(C)Ouchi Cafe Icoi</p>
+        </footer>
+        
+        
+        <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        
+        <script>
+            $(function(){
+                $(document).ready(function(){
+                    $("#sp_navi_btn").click(function (){
+                      $(this).next().slideToggle();
+                    });
+                });
+            });
+        </script>
+    </body>
+</html>

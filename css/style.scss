@@ -1,0 +1,737 @@
+@charset "UTF-8";
+@import "compass";
+// font-family
+$baseFontFamily :"游ゴシック", YuGothic, "メイリオ",Verdana, "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+
+// colors
+$baseColor: #faf6ed;
+$subColor: #825C4C;
+$subColor2: #D3CDBF;
+$keyColor: #DD964A;
+$fontColor: #7c5c4a;
+
+/* Reset
+------------------------------------------------------------*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+/* Base
+------------------------------------------------------------*/
+html {
+  font-size: 62.5%;
+}
+
+body {
+  color: $fontColor;
+  font-size: 1.4rem;
+  font-family: $baseFontFamily;
+  line-height: 1.6;
+  letter-spacing: 0.1rem;
+  background-color: $baseColor;
+  text-align: center;
+}
+
+a {
+  @include link-colors($fontColor, darken($fontColor, 10%), lighten($fontColor, 5%), darken($fontColor, 10%));
+  color: $fontColor;
+  text-decoration: none;
+}
+@media (min-width: 768px) {
+  a:hover {
+    text-decoration: underline;
+  }
+}
+/* Layout
+------------------------------------------------------------*/
+.block-center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.max-full-width {
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+@media (min-width: 768px) {
+  .sp{
+      display: none;
+  }
+}
+
+@media (max-width: 767px) {
+    .pc{
+        display: none;
+    }
+}
+
+/*SP表示　装飾 START=====================================================================*/
+
+//header------------------------------------------------------------
+header{
+    background-color: rgba(221,205,191,0.8);
+    width: 100%;
+    position: absolute;
+    padding: 25px 8px 15px 8px;
+    
+    .header_in{
+        display: flex;
+        justify-content: space-between;
+        width: 95%;
+        margin-left: auto;
+        margin-right: auto;
+        h1{
+            img{
+                width: 100px;
+            }
+        }
+        .sp_navi_li{
+            position: absolute;
+            top: 65px;
+            right: 3%;
+            left: 3%;
+            background: $keyColor;
+            margin: 0;
+            padding: 0;
+            display: none;
+            z-index: 100;
+            
+            li{
+                list-style: none;
+                margin: 0;
+                padding: 0;
+                a{
+                    display: block;
+                    padding: 23px 0;
+                    border-bottom: 1px solid #eee;
+                    text-decoration: none;
+                    text-align: center;
+                    &.last{
+                        border-bottom: none;
+                    }
+                }
+            }//li END---
+        }//.sp_navi_li END-------------------------------------------
+    }//header_in END-------------------------------------------
+}//header END-------------------------------------------
+
+main{
+    //共通装飾----------------------------------------
+    a.button{
+        display: block;
+        background: $keyColor;
+        width: 230px;
+        padding: 20px 0;
+        margin: 0 auto;
+        box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.29);
+    }
+    .deco{
+        position: absolute;
+        width: 20vw;
+        z-index: -1;
+        opacity: 0.7;
+    }
+    p{
+        display: block;
+        margin: 30px 0;
+    }
+    span{
+        font-size: 2rem;
+        &.underline{
+            text-decoration: underline solid darken($baseColor, 30%);
+        }
+        &.bold{
+            font-weight: bold;
+        }
+    }
+    .page_title{
+        margin: 40px 0;
+    }
+    .twitter_area{
+        margin: auto;
+        margin-bottom: 80px;
+        width: 90%;
+    }
+    .twitter_text{
+        display: block;
+        margin-top: 70px;
+        width: 100%;
+        border-bottom: 2px solid $fontColor;
+    }
+    
+    
+    //#title_cover_top------------------------------------- 
+    #title_cover_top{
+        width: 100%;
+        height: 100vh;
+        overflow: hidden;
+        background: $subColor2;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-content: center;
+        
+        .cover_img{
+            margin-top: 0;
+            margin-left: -50%;
+            width: 180%;
+            height: 50vh;
+            background-position: 100% 100%;
+            background-image: url("../img/top.jpg");
+            background-size: cover;
+        }
+        .scroll_btn{
+            i{
+                color: $keyColor;
+                background-color: #ffffff;
+                padding-top: 5px;
+                width: 30px;
+                height: 30px;
+                font-size: 2rem;
+                border-radius: 50%;
+            }
+            align-self: flex-end;
+            margin: 0 auto;
+            margin-bottom: 40px;
+        }
+    }//#title_cover_top END------------------------------------- 
+
+    //#about_area-------------------------------------   
+    #about_area{
+        position: relative;
+        h3.logo{
+            padding: 35px 0;
+            background: rgba(255,255,255,0.4);
+        }
+        h2{
+            font-size: 1.8rem;
+            margin-top: 20px;
+            margin-bottom: 50px;
+            span{
+                font-size: 2.3rem;
+            }
+        }
+        .pink4{
+            top: 190px;
+            left: 8%;
+        }
+        .purple2{
+            top: 310px;
+            right: 15%;
+        }
+        .blue2{
+            bottom: 80px;
+            left: 7%;
+        }
+        .pink3{
+            bottom: 190px;
+            right: 10%;
+        }
+    } //#about_area END-------------------------------------
+    
+    //#menu_cover-------------------------------------
+    #menu_cover{
+        margin-top: 80px;
+        margin-bottom: 60px;
+        height: 180px;
+        background-image: url("../img/drink.jpg");
+        background-size: cover;
+    }//#menu_cover END-------------------------------------
+    
+    //#menu_area-------------------------------------
+    #menu_area{
+        position: relative;
+        
+        .yellow{
+            top: 60px;
+            left: 10%;
+            opacity: 1;
+        }
+        .orange2{
+            bottom: 40px;
+            right: 8%;
+        }
+    }//#menu_area END-------------------------------------
+    
+    //#access_cover-------------------------------------
+    #access_cover{
+        margin-top: 80px;
+        margin-bottom: 60px;
+        height: 180px;
+        background-image: url("../img/exterior1.jpg");
+        background-size: cover;
+    }//#access_cover END-------------------------------------
+    
+    //#access_area-------------------------------------
+    #access_area{
+        position: relative;
+        .green2{
+            top: 160px;
+            left: 5%;
+        }
+        .blue4{
+            top: -20px;
+            right: 5%;
+        }
+    }//#access_area END-------------------------------------
+    
+    
+    /*aboutページ 装飾=====================================================================*/
+    #title_cover_about{
+        height: 350px;
+        background-image: url("../img/indoor2.jpg");
+        background-size: cover;
+        background-position: 70% 0%;
+    }
+    
+    #about{
+        .items{
+            margin: 0 auto;
+            width: 80%;
+            margin-top: 40px;
+            margin-bottom: 35px;
+            img{
+                width: 100%;
+                height: 125px;
+                object-fit: cover;
+            }
+            p{
+                text-align: left;
+                margin-top: 15px;
+            }
+        }
+    }/*aboutページ 装飾 END=====================================================================*/
+    
+    /*menuページ 装飾=====================================================================*/
+    #title_cover_menu{
+        height: 350px;
+        background-image: url("../img/cheeseCake.jpg");
+        background-size: cover;
+        background-position: 40% 0%;
+    }
+    
+    #menu{
+        .container{
+            margin-top: 45px;
+            margin-bottom: 100px;
+            text-align: left;
+            .items{
+                margin: 0 auto;
+                width: 90%;
+                margin-top: 40px;
+                text-shadow: 0px 0px 3px $baseColor;
+                
+                h3{
+                    margin: 0;
+                    span{
+                        margin-left: -5px;
+                    }
+                    span.small{
+                        font-size: 1.6rem;
+                    }
+                }
+                p{
+                    margin: 0 0 0 5px;
+                }
+            }
+        }
+        position: relative;
+        .deco{
+            width: auto;
+            opacity: 0.5;
+        }
+        .soda{
+            top: 150px;
+            right: 25%;
+        }
+        .coffee{
+            top: 330px;
+            right: 5%;
+        }
+        .parfait{
+            top: 440px;
+            right: 5%;
+        }
+        .pudding{
+            top: 570px;
+            right: 9%;
+        }
+        .sandwich{
+            bottom: -10px;
+            right: 10%;
+        }
+        .carry{
+            bottom: -80px;
+            right: 25%;
+        }
+    }/*menuページ 装飾 END=====================================================================*/
+    
+    /*accessページ 装飾=====================================================================*/
+    #title_cover_access{
+        height: 350px;
+        background-image: url("../img/indoor3.jpg");
+        background-size: cover;
+        background-position: 50% 0%;
+    }
+    
+    #access{
+        .items{
+            width: 90%;
+            margin-left: auto;
+            margin-right: auto;
+            font-size: 1.4rem;
+            text-align: left;
+            a{
+                text-decoration: underline;
+            }
+        }
+        #gooleMapArea{
+            height: 200px;
+            margin-bottom: 80px;
+        }
+        
+    }/*accessページ 装飾 END=====================================================================*/
+    
+}//main END-------------------------------------
+
+footer{
+    padding: 30px 0;
+    background: $subColor;
+    color: $subColor2;
+    
+    ul{
+        li{
+            display: inline-block;
+            font-size: 1.2rem;
+            a{
+                @include link-colors($subColor2, darken($subColor2, 10%), lighten($subColor2, 5%), darken($subColor2, 10%));
+            }
+            &.twitter_icon{
+                margin-top: 15px;
+                font-size: 2rem;
+                display: block;
+            }
+            span{
+                margin: 0 12px;
+            }
+        }
+    }
+    .copyright{
+        display: block;
+        margin-top: 30px;
+        font-size: 1rem;
+    }
+}//footer END------------------------------------------
+/*SP表示END=====================================================================*/
+
+
+
+
+
+
+
+//PC表示------------------------------------------
+@media (min-width: 768px) {
+    
+    header{
+        background-color: rgba(221,205,191,0.8);
+        position: absolute;
+        width: 100%;
+        padding: 15px 0 15px 0;
+        z-index: 100;
+        .header_in{
+            max-width: 750px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            
+            h1{
+                a:hover{
+                        position: relative;
+                        top: 2px;
+                        left: 2px;
+                    }
+                img{
+                    width: 170px;
+                }
+            }
+            ul{
+                li{
+                    display: inline-block;
+                    margin-left: 40px;
+                    a:hover{
+                        position: relative;
+                        top: 2px;
+                        left: 2px;
+                    }
+                    a.twitter_icon{
+                        font-size: 2rem;
+                    }
+                }
+            }
+        }//header_in END---------------------------------------
+    }//header END---------------------------------------
+    
+    main{
+        //PC共通装飾----------------------------------------
+        .deco{
+            width: auto;
+            opacity: 1;
+        }
+        a.button{
+            margin-top: 80px;
+        }
+        .button:active {
+          box-shadow: inset 0 0 2px rgba(128, 128, 128, 0.1);
+          transform: translateY(2px);
+        }
+        a.button:hover{
+            position: relative;
+            top: 2px;
+        }
+        .page_title{
+            margin: 70px auto 35px auto;
+            width: 170px;
+            background: $keyColor;
+            border-radius: 50%;
+            padding: 25px;
+        }
+        .twitter_text{
+            margin-left: auto;
+            margin-right: auto;
+            width: 230px;
+        }
+        .twitter_area{
+            max-width: 500px;
+        }
+        
+        //#title_cover_top------------------------------------- 
+        #title_cover_top{
+            height: auto;
+            background: $subColor2;
+            display: block;
+            position: relative;
+            
+            .cover_img{
+                margin: 0;
+                width: auto;
+                height: 500px;
+                background-position: 100% 100%;
+                background-image: url("../img/top.jpg");
+                background-size: cover;
+            }
+            h2{
+                img{
+                    position: absolute;
+                    left: 10%;
+                    top: 0;
+                    bottom: 0;
+                    margin: auto;
+                }
+            }
+        }//#title_cover_top END------------------------------------- 
+        
+        //#about_area-------------------------------------   
+        #about_area{
+            .pink4{
+                top: 55px;
+                left: 5%;
+            }
+            .purple2{
+                top: 310px;
+                right: 5%;
+            }
+            .blue2{
+                bottom: 80px;
+                left: 10%;
+            }
+            .pink3{
+                bottom: -40px;
+                right: 15%;
+            }
+        } //#about_area END-------------------------------------
+        
+        //#menu_cover-------------------------------------
+        #menu_cover{
+            height: 400px;
+        }//#menu_cover END-------------------------------------
+        
+        //#menu_area-------------------------------------
+        #menu_area{
+            .container{
+                display: flex;
+                justify-content: center;
+            }
+            position: relative;
+            
+            .yellow{
+                top: 60px;
+                left: 10%;
+                opacity: 1;
+            }
+            .orange2{
+                bottom: 40px;
+                right: 8%;
+            }
+        }//#menu_area END-------------------------------------
+        
+        //#access_cover-------------------------------------
+        #access_cover{
+            height: 400px;
+            background-position: 50%;
+        }//#access_cover END-------------------------------------
+        
+        //#access_area-------------------------------------
+        #access_area{
+            .green2{
+                top: -50px;
+                left: 20%;
+            }
+            .blue4{
+                top: 20px;
+                right: 15%;
+            }
+            .pink4{
+                top: 220px;
+                left: 10%;
+            }
+            .green1{
+                top: 290px;
+                right: 15%;
+            }
+            
+        }//#access_area END-------------------------------------
+    
+        /*aboutページ 装飾=====================================================================*/
+        #about{
+            .container{
+                max-width: 700px;
+                margin-top: 40px;
+                margin-left: auto;
+                margin-right: auto;
+                display: flex;
+                justify-content: space-between;
+                
+                .items{
+                    margin: 0 10px;
+                }
+            }
+        }/*aboutページ 装飾 END=====================================================================*/
+        
+        /*menuページ 装飾=====================================================================*/
+    #title_cover_menu{
+        background-position: 40% 30%;
+    }
+    
+    #menu{
+        .container{
+            display: flex;
+            flex-flow: column wrap;
+            max-width: 700px;
+            height: 440px;
+            align-content: center;
+            margin-right: auto;
+            margin-left: auto;
+            margin-bottom: 70px;
+            
+            .items{
+                margin: 10px;
+                width: 260px;
+                height: 200px;
+            }
+        }
+        .deco{
+            width: auto;
+            opacity: 0.6;
+        }
+        .soda{
+            height: 100px;
+            top: 60px;
+            left: 15%;
+        }
+        .coffee{
+            top: 330px;
+            left: 5%;
+        }
+        .parfait{
+            top: 60px;
+            right: 20%;
+        }
+        .pudding{
+            top: 210px;
+            right: 10%;
+        }
+        .sandwich{
+            bottom: 90px;
+            right: 7%;
+        }
+        .carry{
+            bottom: 8px;
+            right: 25%;
+        }
+    }/*menuページ 装飾 END=====================================================================*/
+        
+    /*accessページ 装飾=====================================================================*/
+    #title_cover_access{
+        height: 350px;
+        background-image: url("../img/indoor3.jpg");
+        background-size: cover;
+        background-position: center;
+    }
+    
+    #access{
+        .container{
+            max-width: 750px;
+            margin: 0 auto;
+            display: flex;
+            flex-flow: row-reverse wrap;
+            
+            .items{
+                margin-left: 40px;
+                width: 300px;
+                text-align: left;
+                a{
+                    text-decoration: underline;
+                }
+                .text_top{
+                    margin-top: 0;
+                }
+            }
+            #gooleMapArea{
+                width: 400px;
+                
+                height: 430px;
+                margin-bottom: 80px;
+            }
+        }
+        
+    }/*accessページ 装飾 END=====================================================================*/
+    
+    
+    }//main END-------------------------------------
+    
+    footer{
+        ul{
+            li.twitter_icon{
+                margin-top: 0;
+                margin-left: 30px;
+                display: inline-block;
+            }
+        }
+    }//footer END------------------------------------------
+}//PC表示 END------------------------------------------
+
